@@ -10,11 +10,13 @@
   --second-font-color: #757575;
   --second-background-color: #2f303a;
   --white-font-color: #fff;
+  --svg-grey-color: #afb1b8;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--main-font-color);
+  margin: 0 auto;
 }
 li {
   padding: 0;
@@ -62,9 +64,23 @@ img {
   cursor: pointer;
 }
 
+.title-h2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.title-h3 {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 /* --------------------HEADER------------------------ */
 
-}
 .header {
   background-color: var(--white-font-color);
   border-bottom: 1px solid #ececec;
@@ -133,7 +149,9 @@ img {
 .header-item .link:hover,
 .header-item .link:focus,
 .nav-item .link:hover,
-.nav-item .link:focus {
+.nav-item .link:focus,
+.header-icon-link:hover,
+.header-icon-link:focus {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -153,12 +171,17 @@ img {
   color: var(--second-font-color);
 }
 
+.header-icon-link {
+  color: var(--second-font-color);
+}
+
 .nav-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.icon {
+.header-icon {
   margin-right: 10px;
+  fill: currentColor;
 }
 
 /* --------------------HERO------------------------ */
@@ -167,13 +190,12 @@ img {
   padding-bottom: 200px;
   padding-top: 200px;
   margin: 0 auto;
-  background-image: url(../images/background-hero.jpg);
-  /* background-image: linear-gradient(); */
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/background-hero.jpg);
   width: 1600px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-
   background-color: var(--second-background-color);
 }
 .hero-title {
@@ -227,12 +249,16 @@ img {
   clip-path: inset(50%);
   margin: -1px;
 }
+.about-icon-box {
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 25px 100px;
+}
 .about-title {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
   margin-bottom: 10px;
 }
 .about-text {
@@ -259,11 +285,6 @@ img {
 }
 
 .todo-title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
 
@@ -280,11 +301,6 @@ img {
   padding: 94px 0;
 }
 .ourteam-main-title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
-  letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
 .ourteam-list {
@@ -300,11 +316,12 @@ img {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 30px;
 }
 
 .ourteam-bottom-wrap {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 16px;
 }
 .ourteam-title {
   font-weight: 500;
@@ -322,6 +339,74 @@ img {
   color: var(--second-font-color);
 }
 
+.social-link-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px 12px;
+  color: var(--svg-grey-color);
+}
+.svg-social {
+  fill: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--brand-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--white-font-color);
+}
+
+.social-link-item + .social-link-item {
+  margin-left: 10px;
+}
+
+/* --------------------Our clients------------------------ */
+.our-clients-section {
+  padding-top: 73px;
+  padding-bottom: 94px;
+}
+
+.our-clients-title-title {
+  margin-bottom: 50px;
+}
+
+.our-clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-clients-item + .our-clients-item {
+  margin-left: 30px;
+}
+.our-clients-link {
+  display: block;
+  width: 170px;
+  height: 90px;
+  border: 1px solid var(--svg-grey-color);
+  border-radius: 4px;
+  padding: 16px 32px;
+  color: var(--svg-grey-color);
+}
+.clients-svg {
+  fill: currentColor;
+}
+.our-clients-link:hover,
+.our-clients-link:focus {
+  border: 1px solid var(--brand-color);
+  color: var(--brand-color);
+}
+
 /* --------------------Footer------------------------ */
 
 .footer {
@@ -330,6 +415,14 @@ img {
   padding-top: 60px;
 }
 
+.footer > .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.adress-wrap {
+  margin-right: 70px;
+}
 .logo-secword-footer {
   color: var(--white-font-color);
 }
@@ -339,7 +432,7 @@ img {
   margin-bottom: 20px;
 }
 
-.footer-adress-item {
+.footer-adress-item .link {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -357,6 +450,36 @@ img {
 
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
+}
+.footer-title {
+  color: var(--white-font-color);
+  margin-bottom: 20px;
+}
+.footer-social-link-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white-font-color);
+}
+.bottom-svg {
+  fill: currentColor;
+}
+.footer-social-link-item + .footer-social-link-item {
+  margin-left: 10px;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--brand-color);
 }
 
 /* --------------------Portfolio------------------------ */
@@ -388,6 +511,11 @@ img {
   background: var(--white-font-color);
   border: 1px solid #eeeeee;
 }
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .button-item:not(:last-child) {
   margin-right: 8px;
@@ -411,6 +539,8 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--white-font-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .active-portfolio-btn {
